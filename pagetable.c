@@ -40,7 +40,30 @@ int allocate_frame(pgtbl_entry_t *p) {
 		// Write victim page to swap, if needed, and update pagetable
 		// IMPLEMENTATION NEEDED
 
+		pgtbl_entry_t *victim = coremap[frame].pte;
 
+		// checks if frame is modified before (dirty copy)
+		if(victim->frame & PG_DIRTY){
+			// sets onswap, page has been evicted to swap
+			victim->frame = victim->frame | PG_ONSWAP;
+			// sets valid to 0, not in memory anymore
+			victim->frame = victim->frame & ~PG_VALID;
+
+			// sets swap_offset
+			victim->swap_off = swap_pageout(frame, victim->swap_off)
+
+			if(victim->swap_off == INVALID_SWAP){
+				printf("Error. Failed to swap out the page.");
+				exit(EXIT_FAILURE);
+			}
+
+			evict_dirty_count++;
+
+		} else {
+			victim->frame = victim->frame | PG_ONSWAP;
+			victim->frame = victim->frame & ~PG_VALID;
+			evict_clean_count++;
+		}
 	}
 
 	// Record information for virtual page that will now be stored in frame
