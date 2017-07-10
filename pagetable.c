@@ -194,9 +194,11 @@ char *find_physpage(addr_t vaddr, char type) {
 		} else{
 			// the entry is invalid and not on swap
 			// a (simulated) physical frame allocated and initialized (using init_frame).
-			init_frame(frame, vaddr);
 			p->frame = frame << PAGE_SHIFT;
+			init_frame(frame, vaddr);
+			p->frame &= ~PG_DIRTY;
 		}
+
 		miss_count++;
 	}
 
@@ -209,7 +211,7 @@ char *find_physpage(addr_t vaddr, char type) {
 
 	if(type=='M' || type=='S'){
 		p->frame = p->frame | PG_DIRTY;
-    }
+  }
 
 	// Call replacement algorithm's ref_fcn for this page
 	ref_fcn(p);
