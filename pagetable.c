@@ -48,7 +48,8 @@ int allocate_frame(pgtbl_entry_t *p) {
 			int swap_offset = swap_pageout(frame, victim->swap_off);
 
 			if (swap_offset == INVALID_SWAP) { // Could not allocate space in swapfile
-				exit(1);
+				printf("Error. Failed to swap in the page.");
+				exit(EXIT_FAILURE);
 			}
 
 			// set swap_offset
@@ -181,7 +182,7 @@ char *find_physpage(addr_t vaddr, char type) {
 		if(p->frame & PG_ONSWAP){
 			// the entry is invalid and on swap
 			// a (simulated) physical frame allocated and filled by reading the page data from swap.
-			if(swap_pagein(frame, p->swap_off)){
+			if (swap_pagein(frame, p->swap_off) == INVALID_SWAP){
 				printf("Error. Failed to swap in the page.");
 				exit(EXIT_FAILURE);
 			}
