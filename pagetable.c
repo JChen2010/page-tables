@@ -43,28 +43,27 @@ int allocate_frame(pgtbl_entry_t *p) {
 		pgtbl_entry_t *victim = coremap[frame].pte;
 
 		// checks if frame is modified before (dirty copy)
-		if(victim->frame & PG_DIRTY){
-			// write data from the frame to swapfile
+		if (victim->frame & PG_DIRTY) {
+			// write the victim frame's data to swapfile
 			int swap_offset = swap_pageout(frame, victim->swap_off);
-
-			if (swap_offset == INVALID_SWAP) { // Could not allocate space in swapfile
-				printf("Error. Failed to swap in the page.");
-				exit(EXIT_FAILURE);
-			}
-
+			assert(swap_offset != INVALID_SWAP);
 			// set swap_offset
 			victim->swap_off = swap_offset;
 
+			// mark page on-swap
+			victim->frame |= PG_ONSWAP;
+
+			// increment dirty frame evict count
 			evict_dirty_count++;
 		} else {
 			evict_clean_count++;
 		}
 
+
+
 		// set PTE state to invalid
 		victim->frame &= ~PG_VALID;
-		// page is on swap
-		victim->frame |= PG_ONSWAP;
-		// page is not modified yet
+		// un-mark page dirty
 		victim->frame &= ~PG_DIRTY;
 	}
 
@@ -168,40 +167,35 @@ char *find_physpage(addr_t vaddr, char type) {
 		pgdir[idx] = init_second_level();
 	}
 
-	pgtbl_entry_t *pg_tbls = (pgtbl_entry_t *) (pgdir[idx].pde & PAGE_MASK);
+	pgtbl_entry_t *pg_tbl = (pgtbl_entry_t *) (pgdir[idx].pde & PAGE_MASK);
 
 	// Use vaddr to get index into 2nd-level page table and initialize 'p'
 	unsigned pg_tbl_idx = PGTBL_INDEX(vaddr);
-	p = &pg_tbls[pg_tbl_idx];
+	p = &pg_tbl[pg_tbl_idx];
 
 	// Check if p is valid or not, on swap or not, and handle appropriately
-	if ((p->frame & PG_VALID) == 0) { // page is not in memory
-		if ((p->frame & PG_ONSWAP) == 0) {
-			// the entry is invalid and not on swap, allocate frame
+	if (!(p->frame & PG_VALID)) { // page is not in memory
+		if (!(p->frame & PG_ONSWAP)) { // page is not on swap
 			int frame = allocate_frame(p);
-
 			// initialize frame
 			init_frame(frame, vaddr);
-
-			// page is modified now
-			p->frame |= PG_DIRTY;
-			// page is valid now
-			p->frame &= PG_VALID;
-		} else { // the entry is invalid and on swap
-			// fill the entry with data retrieved from swap
-			swap_pagein(p->frame, p->swap_off);
-
-			// allocate frame
-			int frame = allocate_frame(p);
-
-			// shift page to match physical addr
+			// shift page when store to PTE to allow status bits
 			p->frame = frame << PAGE_SHIFT;
-			// page is not on swap anymore
-			p->frame &= ~PG_ONSWAP;
-			// page is not modified anymore
+			// mark page dirty on preparation for the frame
+			p->frame |= PG_DIRTY;
+			// mark page not on-swap
+			p->frame |= PG_ONSWAP;
+		} else { // the entry is on swap
+			int frame = allocate_frame(p);
+			// retrieve the PFN from swapfile and put to the frame
+			assert (swap_pagein(frame, p->swap_off) == 0);
+
+			// shift page when store to PTE to allow status bits
+			p->frame = frame << PAGE_SHIFT;
+			// mark page on-swap
+			p->frame |= PG_ONSWAP;
+			// un-mark page dirty
 			p->frame &= ~PG_DIRTY;
-			// page is valid now
-			p->frame &= PG_VALID;
 		}
 
 		miss_count++;
