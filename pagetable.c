@@ -190,7 +190,7 @@ char *find_physpage(addr_t vaddr, char type) {
 			// set page and offset for the PTE
 			p->frame = frame << PAGE_SHIFT;
 			p->frame |= PG_ONSWAP;
-			p->frame &= ~PG_VALID;
+			p->frame &= ~PG_DIRTY;
 		} else{
 			// the entry is invalid and not on swap
 			// a (simulated) physical frame allocated and initialized (using init_frame).
