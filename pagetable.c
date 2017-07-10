@@ -186,9 +186,11 @@ char *find_physpage(addr_t vaddr, char type) {
 				printf("Error. Failed to swap in the page.");
 				exit(EXIT_FAILURE);
 			}
+
+			// set page and offset for the PTE
 			p->frame = frame << PAGE_SHIFT;
-			// sets onswap to 1, page has been evicted to swap
-			p->frame = p->frame | PG_ONSWAP;
+			p->frame |= PG_ONSWAP;
+			p->frame &= ~PG_VALID;
 		} else{
 			// the entry is invalid and not on swap
 			// a (simulated) physical frame allocated and initialized (using init_frame).
