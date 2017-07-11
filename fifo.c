@@ -20,10 +20,10 @@ int oldest_idx;
  * for the page that is to be evicted.
  */
 int fifo_evict() {
-  // evict the current oldest page
-  int victim = oldest_idx;
-  // the oldest page is always the head of page addr list
-  oldest_idx = (oldest_idx + 1) % memsize;
+	// evict the current oldest page
+	int victim = oldest_idx;
+	// the oldest page is always the head of page addr list
+	oldest_idx = (oldest_idx + 1) % memsize;
 	return victim;
 }
 

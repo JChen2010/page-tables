@@ -59,9 +59,7 @@ int allocate_frame(pgtbl_entry_t *p) {
 			evict_clean_count++;
 		}
 
-
-
-		// set PTE state to invalid
+		// set state to invalid
 		victim->frame &= ~PG_VALID;
 		// un-mark page dirty
 		victim->frame &= ~PG_DIRTY;
@@ -175,8 +173,10 @@ char *find_physpage(addr_t vaddr, char type) {
 
 	// Check if p is valid or not, on swap or not, and handle appropriately
 	if (!(p->frame & PG_VALID)) { // page is not in memory
+
+		int frame;
 		if (!(p->frame & PG_ONSWAP)) { // page is not on swap
-			int frame = allocate_frame(p);
+			frame = allocate_frame(p);
 			// initialize frame
 			init_frame(frame, vaddr);
 			// shift page when store to PTE to allow status bits
@@ -185,8 +185,11 @@ char *find_physpage(addr_t vaddr, char type) {
 			p->frame |= PG_DIRTY;
 			// mark page not on-swap
 			p->frame |= PG_ONSWAP;
-		} else { // the entry is on swap
-			int frame = allocate_frame(p);
+
+		} 
+
+		else { // the entry is on swap
+			frame = allocate_frame(p);
 			// retrieve the PFN from swapfile and put to the frame
 			assert (swap_pagein(frame, p->swap_off) == 0);
 
@@ -197,6 +200,9 @@ char *find_physpage(addr_t vaddr, char type) {
 			// un-mark page dirty
 			p->frame &= ~PG_DIRTY;
 		}
+
+		// Store vaddr of frame in coremap entry (requried for opt)
+		coremap[frame].vaddr = vaddr;
 
 		miss_count++;
 	} else { // valid p, p in memory

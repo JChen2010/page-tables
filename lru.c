@@ -24,8 +24,8 @@ int lru_evict() {
   int victim;
   // This represents the least recent reference
   unsigned long least_recent_ref = time_count;
-
-  for (int i = 0; i < memsize; ++i) {
+  int i;
+  for (i = 0; i < memsize; ++i) {
     if (coremap[i].pte->last_ref < least_recent_ref) {
       // Found new oldest referenced PTE
       victim = i;

@@ -48,12 +48,12 @@ typedef unsigned long addr_t;
 // Page directory entry (top-level)
 typedef struct {
 	uintptr_t pde;
-} pgdir_entry_t;
+} pgdir_entry_t;// Found eviction target
 
 // Page table entry (2nd-level).
 typedef struct {
 	unsigned int frame; // if valid bit == 1, physical frame holding vpage
-  unsigned long last_ref; // serve as a timestamp for LRU
+  	unsigned long last_ref; // serve as a timestamp for LRU
 	off_t swap_off;       // offset in swap file of vpage, if any
 } pgtbl_entry_t;
 
@@ -66,6 +66,7 @@ struct frame {
 	char in_use;       // True if frame is allocated, False if frame is free
 	pgtbl_entry_t *pte;// Pointer back to pagetable entry (pte) for page
 	                   // stored in this frame
+	addr_t vaddr; // the vaddr of this frame (required for opt)
 };
 
 /* The coremap holds information about physical memory.
