@@ -11,6 +11,7 @@ traces: $(PROGS)
 	./runit simpleloop
 	./runit matmul 100
 	./runit blocked 100 25
+	./runit hashtable
 
 .PHONY: clean
 clean : 

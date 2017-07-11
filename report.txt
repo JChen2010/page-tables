@@ -1,0 +1,681 @@
+make: `sim' is up to date.
+
+50 rand
+
+Hit count: 7352
+Miss count: 3024
+Clean evictions: 250
+Dirty evictions: 2724
+Total references : 10376
+Hit rate: 70.8558
+Miss rate: 29.1442
+
+Hit count: 1892047
+Miss count: 995849
+Clean evictions: 956390
+Dirty evictions: 39409
+Total references : 2887896
+Hit rate: 65.5165
+Miss rate: 34.4835
+
+Hit count: 2409822
+Miss count: 8178
+Clean evictions: 5643
+Dirty evictions: 2485
+Total references : 2418000
+Hit rate: 99.6618
+Miss rate: 0.3382
+
+Hit count: 6896
+Miss count: 520
+Clean evictions: 169
+Dirty evictions: 301
+Total references : 7416
+Hit rate: 92.9881
+Miss rate: 7.0119
+
+100 rand
+
+Hit count: 7599
+Miss count: 2777
+Clean evictions: 60
+Dirty evictions: 2617
+Total references : 10376
+Hit rate: 73.2363
+Miss rate: 26.7637
+
+Hit count: 2564046
+Miss count: 323850
+Clean evictions: 316370
+Dirty evictions: 7380
+Total references : 2887896
+Hit rate: 88.7860
+Miss rate: 11.2140
+
+Hit count: 2412777
+Miss count: 5223
+Clean evictions: 3400
+Dirty evictions: 1723
+Total references : 2418000
+Hit rate: 99.7840
+Miss rate: 0.2160
+
+Hit count: 7080
+Miss count: 336
+Clean evictions: 22
+Dirty evictions: 214
+Total references : 7416
+Hit rate: 95.4693
+Miss rate: 4.5307
+
+150 rand
+
+Hit count: 7655
+Miss count: 2721
+Clean evictions: 16
+Dirty evictions: 2555
+Total references : 10376
+Hit rate: 73.7760
+Miss rate: 26.2240
+
+Hit count: 2791539
+Miss count: 96357
+Clean evictions: 93825
+Dirty evictions: 2382
+Total references : 2887896
+Hit rate: 96.6634
+Miss rate: 3.3366
+
+Hit count: 2413644
+Miss count: 4356
+Clean evictions: 2735
+Dirty evictions: 1471
+Total references : 2418000
+Hit rate: 99.8199
+Miss rate: 0.1801
+
+Hit count: 7100
+Miss count: 316
+Clean evictions: 8
+Dirty evictions: 158
+Total references : 7416
+Hit rate: 95.7389
+Miss rate: 4.2611
+
+200 rand
+
+Hit count: 7652
+Miss count: 2724
+Clean evictions: 17
+Dirty evictions: 2507
+Total references : 10376
+Hit rate: 73.7471
+Miss rate: 26.2529
+
+Hit count: 2831517
+Miss count: 56379
+Clean evictions: 54548
+Dirty evictions: 1631
+Total references : 2887896
+Hit rate: 98.0477
+Miss rate: 1.9523
+
+Hit count: 2414138
+Miss count: 3862
+Clean evictions: 2294
+Dirty evictions: 1368
+Total references : 2418000
+Hit rate: 99.8403
+Miss rate: 0.1597
+
+Hit count: 7138
+Miss count: 278
+Clean evictions: 0
+Dirty evictions: 78
+Total references : 7416
+Hit rate: 96.2513
+Miss rate: 3.7487
+
+50 fifo
+
+Hit count: 7399
+Miss count: 2977
+Clean evictions: 202
+Dirty evictions: 2725
+Total references : 10376
+Hit rate: 71.3088
+Miss rate: 28.6912
+
+Hit count: 1760634
+Miss count: 1127262
+Clean evictions: 1083219
+Dirty evictions: 43993
+Total references : 2887896
+Hit rate: 60.9660
+Miss rate: 39.0340
+
+Hit count: 2411574
+Miss count: 6426
+Clean evictions: 4102
+Dirty evictions: 2274
+Total references : 2418000
+Hit rate: 99.7342
+Miss rate: 0.2658
+
+Hit count: 6929
+Miss count: 487
+Clean evictions: 135
+Dirty evictions: 302
+Total references : 7416
+Hit rate: 93.4331
+Miss rate: 6.5669
+
+100 fifo
+
+Hit count: 7611
+Miss count: 2765
+Clean evictions: 44
+Dirty evictions: 2621
+Total references : 10376
+Hit rate: 73.3520
+Miss rate: 26.6480
+
+Hit count: 1804342
+Miss count: 1083554
+Clean evictions: 1061228
+Dirty evictions: 22226
+Total references : 2887896
+Hit rate: 62.4795
+Miss rate: 37.5205
+
+Hit count: 2413686
+Miss count: 4314
+Clean evictions: 2731
+Dirty evictions: 1483
+Total references : 2418000
+Hit rate: 99.8216
+Miss rate: 0.1784
+
+Hit count: 7078
+Miss count: 338
+Clean evictions: 10
+Dirty evictions: 228
+Total references : 7416
+Hit rate: 95.4423
+Miss rate: 4.5577
+
+150 fifo
+
+Hit count: 7651
+Miss count: 2725
+Clean evictions: 16
+Dirty evictions: 2559
+Total references : 10376
+Hit rate: 73.7375
+Miss rate: 26.2625
+
+Hit count: 2853481
+Miss count: 34415
+Clean evictions: 32945
+Dirty evictions: 1320
+Total references : 2887896
+Hit rate: 98.8083
+Miss rate: 1.1917
+
+Hit count: 2413785
+Miss count: 4215
+Clean evictions: 2638
+Dirty evictions: 1427
+Total references : 2418000
+Hit rate: 99.8257
+Miss rate: 0.1743
+
+Hit count: 7090
+Miss count: 326
+Clean evictions: 1
+Dirty evictions: 175
+Total references : 7416
+Hit rate: 95.6041
+Miss rate: 4.3959
+
+200 fifo
+
+Hit count: 7659
+Miss count: 2717
+Clean evictions: 12
+Dirty evictions: 2505
+Total references : 10376
+Hit rate: 73.8146
+Miss rate: 26.1854
+
+Hit count: 2854002
+Miss count: 33894
+Clean evictions: 32435
+Dirty evictions: 1259
+Total references : 2887896
+Hit rate: 98.8263
+Miss rate: 1.1737
+
+Hit count: 2414831
+Miss count: 3169
+Clean evictions: 1867
+Dirty evictions: 1102
+Total references : 2418000
+Hit rate: 99.8689
+Miss rate: 0.1311
+
+Hit count: 7105
+Miss count: 311
+Clean evictions: 0
+Dirty evictions: 111
+Total references : 7416
+Hit rate: 95.8064
+Miss rate: 4.1936
+
+50 lru
+
+Hit count: 7590
+Miss count: 2786
+Clean evictions: 86
+Dirty evictions: 2650
+Total references : 10376
+Hit rate: 73.1496
+Miss rate: 26.8504
+
+Hit count: 1846673
+Miss count: 1041223
+Clean evictions: 1040065
+Dirty evictions: 1108
+Total references : 2887896
+Hit rate: 63.9453
+Miss rate: 36.0547
+
+Hit count: 2412866
+Miss count: 5134
+Clean evictions: 2747
+Dirty evictions: 2337
+Total references : 2418000
+Hit rate: 99.7877
+Miss rate: 0.2123
+
+Hit count: 7025
+Miss count: 391
+Clean evictions: 72
+Dirty evictions: 269
+Total references : 7416
+Hit rate: 94.7276
+Miss rate: 5.2724
+
+100 lru
+
+Hit count: 7681
+Miss count: 2695
+Clean evictions: 3
+Dirty evictions: 2592
+Total references : 10376
+Hit rate: 74.0266
+Miss rate: 25.9734
+
+Hit count: 1881434
+Miss count: 1006462
+Clean evictions: 1005277
+Dirty evictions: 1085
+Total references : 2887896
+Hit rate: 65.1490
+Miss rate: 34.8510
+
+Hit count: 2414208
+Miss count: 3792
+Clean evictions: 2606
+Dirty evictions: 1086
+Total references : 2418000
+Hit rate: 99.8432
+Miss rate: 0.1568
+
+Hit count: 7094
+Miss count: 322
+Clean evictions: 1
+Dirty evictions: 221
+Total references : 7416
+Hit rate: 95.6580
+Miss rate: 4.3420
+
+150 lru
+
+Hit count: 7685
+Miss count: 2691
+Clean evictions: 0
+Dirty evictions: 2541
+Total references : 10376
+Hit rate: 74.0652
+Miss rate: 25.9348
+
+Hit count: 2855004
+Miss count: 32892
+Clean evictions: 31658
+Dirty evictions: 1084
+Total references : 2887896
+Hit rate: 98.8610
+Miss rate: 1.1390
+
+Hit count: 2414225
+Miss count: 3775
+Clean evictions: 2560
+Dirty evictions: 1065
+Total references : 2418000
+Hit rate: 99.8439
+Miss rate: 0.1561
+
+Hit count: 7098
+Miss count: 318
+Clean evictions: 0
+Dirty evictions: 168
+Total references : 7416
+Hit rate: 95.7120
+Miss rate: 4.2880
+
+200 lru
+
+Hit count: 7685
+Miss count: 2691
+Clean evictions: 0
+Dirty evictions: 2491
+Total references : 10376
+Hit rate: 74.0652
+Miss rate: 25.9348
+
+Hit count: 2855016
+Miss count: 32880
+Clean evictions: 31596
+Dirty evictions: 1084
+Total references : 2887896
+Hit rate: 98.8615
+Miss rate: 1.1385
+
+Hit count: 2414298
+Miss count: 3702
+Clean evictions: 2437
+Dirty evictions: 1065
+Total references : 2418000
+Hit rate: 99.8469
+Miss rate: 0.1531
+
+Hit count: 7133
+Miss count: 283
+Clean evictions: 0
+Dirty evictions: 83
+Total references : 7416
+Hit rate: 96.1839
+Miss rate: 3.8161
+
+50 clock
+
+Hit count: 7583
+Miss count: 2793
+Clean evictions: 89
+Dirty evictions: 2654
+Total references : 10376
+Hit rate: 73.0821
+Miss rate: 26.9179
+
+Hit count: 1846668
+Miss count: 1041228
+Clean evictions: 1040069
+Dirty evictions: 1109
+Total references : 2887896
+Hit rate: 63.9451
+Miss rate: 36.0549
+
+Hit count: 2412262
+Miss count: 5738
+Clean evictions: 3248
+Dirty evictions: 2440
+Total references : 2418000
+Hit rate: 99.7627
+Miss rate: 0.2373
+
+Hit count: 7015
+Miss count: 401
+Clean evictions: 85
+Dirty evictions: 266
+Total references : 7416
+Hit rate: 94.5928
+Miss rate: 5.4072
+
+100 clock
+
+Hit count: 7677
+Miss count: 2699
+Clean evictions: 5
+Dirty evictions: 2594
+Total references : 10376
+Hit rate: 73.9880
+Miss rate: 26.0120
+
+Hit count: 1886093
+Miss count: 1001803
+Clean evictions: 1000616
+Dirty evictions: 1087
+Total references : 2887896
+Hit rate: 65.3103
+Miss rate: 34.6897
+
+Hit count: 2413850
+Miss count: 4150
+Clean evictions: 2613
+Dirty evictions: 1437
+Total references : 2418000
+Hit rate: 99.8284
+Miss rate: 0.1716
+
+Hit count: 7088
+Miss count: 328
+Clean evictions: 5
+Dirty evictions: 223
+Total references : 7416
+Hit rate: 95.5771
+Miss rate: 4.4229
+
+150 clock
+
+Hit count: 7684
+Miss count: 2692
+Clean evictions: 0
+Dirty evictions: 2542
+Total references : 10376
+Hit rate: 74.0555
+Miss rate: 25.9445
+
+Hit count: 2847573
+Miss count: 40323
+Clean evictions: 39088
+Dirty evictions: 1085
+Total references : 2887896
+Hit rate: 98.6037
+Miss rate: 1.3963
+
+Hit count: 2414213
+Miss count: 3787
+Clean evictions: 2572
+Dirty evictions: 1065
+Total references : 2418000
+Hit rate: 99.8434
+Miss rate: 0.1566
+
+Hit count: 7095
+Miss count: 321
+Clean evictions: 0
+Dirty evictions: 171
+Total references : 7416
+Hit rate: 95.6715
+Miss rate: 4.3285
+
+200 clock
+
+Hit count: 7684
+Miss count: 2692
+Clean evictions: 0
+Dirty evictions: 2492
+Total references : 10376
+Hit rate: 74.0555
+Miss rate: 25.9445
+
+Hit count: 2855002
+Miss count: 32894
+Clean evictions: 31610
+Dirty evictions: 1084
+Total references : 2887896
+Hit rate: 98.8610
+Miss rate: 1.1390
+
+Hit count: 2414792
+Miss count: 3208
+Clean evictions: 1943
+Dirty evictions: 1065
+Total references : 2418000
+Hit rate: 99.8673
+Miss rate: 0.1327
+
+Hit count: 7112
+Miss count: 304
+Clean evictions: 0
+Dirty evictions: 104
+Total references : 7416
+Hit rate: 95.9008
+Miss rate: 4.0992
+
+50 opt
+
+Hit count: 7696
+Miss count: 2680
+Clean evictions: 24
+Dirty evictions: 2606
+Total references : 10376
+Hit rate: 74.1712
+Miss rate: 25.8288
+
+Hit count: 2300432
+Miss count: 587464
+Clean evictions: 586323
+Dirty evictions: 1091
+Total references : 2887896
+Hit rate: 79.6577
+Miss rate: 20.3423
+
+Hit count: 2414299
+Miss count: 3701
+Clean evictions: 2562
+Dirty evictions: 1089
+Total references : 2418000
+Hit rate: 99.8469
+Miss rate: 0.1531
+
+Hit count: 7126
+Miss count: 290
+Clean evictions: 14
+Dirty evictions: 226
+Total references : 7416
+Hit rate: 96.0895
+Miss rate: 3.9105
+
+100 opt
+
+Hit count: 7732
+Miss count: 2644
+Clean evictions: 0
+Dirty evictions: 2544
+Total references : 10376
+Hit rate: 74.5181
+Miss rate: 25.4819
+
+Hit count: 2795093
+Miss count: 92803
+Clean evictions: 91614
+Dirty evictions: 1089
+Total references : 2887896
+Hit rate: 96.7865
+Miss rate: 3.2135
+
+Hit count: 2414996
+Miss count: 3004
+Clean evictions: 1831
+Dirty evictions: 1073
+Total references : 2418000
+Hit rate: 99.8758
+Miss rate: 0.1242
+
+Hit count: 7149
+Miss count: 267
+Clean evictions: 0
+Dirty evictions: 167
+Total references : 7416
+Hit rate: 96.3997
+Miss rate: 3.6003
+
+150 opt
+
+Hit count: 7732
+Miss count: 2644
+Clean evictions: 0
+Dirty evictions: 2494
+Total references : 10376
+Hit rate: 74.5181
+Miss rate: 25.4819
+
+Hit count: 2861276
+Miss count: 26620
+Clean evictions: 25381
+Dirty evictions: 1089
+Total references : 2887896
+Hit rate: 99.0782
+Miss rate: 0.9218
+
+Hit count: 2415471
+Miss count: 2529
+Clean evictions: 1296
+Dirty evictions: 1083
+Total references : 2418000
+Hit rate: 99.8954
+Miss rate: 0.1046
+
+Hit count: 7149
+Miss count: 267
+Clean evictions: 0
+Dirty evictions: 117
+Total references : 7416
+Hit rate: 96.3997
+Miss rate: 3.6003
+
+200 opt
+
+Hit count: 7732
+Miss count: 2644
+Clean evictions: 0
+Dirty evictions: 2444
+Total references : 10376
+Hit rate: 74.5181
+Miss rate: 25.4819
+
+Hit count: 2868626
+Miss count: 19270
+Clean evictions: 17981
+Dirty evictions: 1089
+Total references : 2887896
+Hit rate: 99.3327
+Miss rate: 0.6673
+
+Hit count: 2415721
+Miss count: 2279
+Clean evictions: 1009
+Dirty evictions: 1070
+Total references : 2418000
+Hit rate: 99.9057
+Miss rate: 0.0943
+
+Hit count: 7149
+Miss count: 267
+Clean evictions: 0
+Dirty evictions: 67
+Total references : 7416
+Hit rate: 96.3997
+Miss rate: 3.6003
