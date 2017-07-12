@@ -1,0 +1,13 @@
+INFO.txt
+
+Name: Jiaoquan Chen
+Utorid: chenji55
+CDF ID: g4chenjj
+
+Name: Vugar Mammadli
+Utorid: mammadl4
+CDF ID: c4mammae
+
+Name: Boyang Li
+Utorid: liboyan3
+CDF ID: liboyan3

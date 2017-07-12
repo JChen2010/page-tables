@@ -90,6 +90,7 @@ int main(int argc, char* argv[]) {
    printf("Elapsed time for standard algorithm = %e seconds\n",
          finish1-start1);
 
+   printf("Size of record: %d\n", (int)sizeof(A));
    free(A);
    free(B);
    free(C);
